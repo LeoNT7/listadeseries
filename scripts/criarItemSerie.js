@@ -1,7 +1,7 @@
 const inputSerie = document.getElementById("input-serie");
 
 let contador = 0;
-import { gerarData } from "./util.js";
+import { gerarData, limparInput } from "./util.js";
 import { verificarLista, atualizarContador } from "./util.js";
 
 export function criarItemSerie (listaSeries, contadorPendentes) {
@@ -53,11 +53,14 @@ export function criarItemSerie (listaSeries, contadorPendentes) {
     containerLista.appendChild(assistido);
     containerLista.appendChild(botaoRemover);
     
-    
     itemSerie.appendChild(containerLista);
-    
+    limparInput(inputSerie);
+
     return itemSerie;
 }
+
+
+
 
 
 

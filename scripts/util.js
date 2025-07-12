@@ -1,5 +1,3 @@
-
-
 export function gerarData () {
     const data = new Date().toLocaleDateString("pt-BR");
     const hora = new Date().toLocaleTimeString("pt-BR",{hour: "numeric",
@@ -11,7 +9,7 @@ export function gerarData () {
 
 export function verificarLista (listaSeries) {
     const itensDaLista = listaSeries.querySelectorAll("li");
-    const mensagemListaVazia = document.querySelector(".lista-vazia")
+    const mensagemListaVazia = document.querySelector(".lista-vazia");
     
     if (itensDaLista.length === 0) {
         mensagemListaVazia.style.display = "block"
@@ -33,6 +31,9 @@ export function atualizarContador (listaSeries, contadorElemento) {
     contadorElemento.innerText = `Séries pendentes: ${pendentes}`;
     }
 
+export function limparInput (inputSerie) {
+    inputSerie.value = ""
+    };
 
 
 
